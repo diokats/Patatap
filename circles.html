@@ -14,7 +14,7 @@
     <script type="text/paperscript" canvas="myCanvas">
   
 
-  var data = {
+  var keyData = {
 	q: {
 		sound: new Howl({
   		src: ['sounds/bubbles.mp3']
@@ -184,8 +184,8 @@ function onKeyDown(event) {
     var randomPoint = new Point.random();
     var point = maxPoint * randomPoint;
     var newCircle = new Path.Circle(point, 500)
-    newCircle.fillColor = data[event.key].color;
-    data[event.key].sound.play();
+    newCircle.fillColor = keyData[event.key].color;
+    keyData[event.key].sound.play();
     circles.push(newCircle);
 }
 }
